@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>PALINDROME</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+
+        button {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PALINDROME</h1>
+    <form id="frm1">
+        <p>Enter The String: <input type="text" id="str" name="str" maxlength="20" /></p>
+        <button class="button" onclick="myPalin()">CHECK</button>
+        <br><br>
+        <input class="button" type="reset" name="RESET" />
+    </form>
+    <script>
+        function myPalin() {
+            let str = document.getElementById('str').value;
+            sz = str.length;
+            function CheckPalind(str,sz) {
+                i = 0;
+                j = sz;
+                while (i < sz / 2) {
+                    while (j >= i) {
+                        if (str[i] != str[j]) {
+                            return false;
+                        }
+                        i += 1;
+                        j -= 1;
+                    }
+                    return true;
+                }
+            }
+            let res = CheckPalind(str, sz-1);
+            if(res == true){
+                alert(str+" is a palindrome!");
+            }
+            else{
+                alert(str+" is not a palindrome!");
+            }
+        }
+    </script>
+</body>
+
+</html>

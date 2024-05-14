@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>COMPARE, REVERSE AND CONCATENATE</title>
+</head>
+
+<body style="text-align:center;">
+    <h1>COMPARE, REVERSE AND CONCATENATE</h1>
+    <form id="frm1">
+        <p>Enter String 1: <input type="text" id="str1" name="str1" maxlength="20" /></p>
+        <p>Enter String 2: <input type="text" id="str2" name="str2" maxlength="20" /></p>
+        <button onclick="myFun()">COMPARE</button>
+    </form>
+
+    <script>
+        function myFun() {
+            let str1 = document.getElementById('str1').value;
+            let str2 = document.getElementById('str2').value;
+            let str3 = "";
+            if (str1 === str2) {
+                sz = str2.length;
+                i = sz-1;
+                while (i >= 0) {
+                    str3 = str3 + str2[i];
+                    i-=1;
+                }
+            alert("Reversed Str1 - "+str3);
+            }
+            else{
+                alert("Concatenated - "+(str1+str2));
+            }
+        }
+    </script>
+</body>
+
+</html>

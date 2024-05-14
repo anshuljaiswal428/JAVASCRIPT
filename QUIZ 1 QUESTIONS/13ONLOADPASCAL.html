@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>PASCAL TRIANGLE AND STAR PATTERN USING ONLOAD</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+        button {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PASCAL TRIANGLE AND STAR PATTERN USING ONLOAD</h1>
+    <form id="frm1">
+        <p>Enter Number of Rows: <input type="text" id="num" name="num" maxlength="20" /></p>
+        <button class="button" onclick="myPascal()">PASCAL TRIANGLE</button>
+        <button class="button" onclick="myStar()">STAR PATTERN</button>
+    </form>
+    <script>
+        function myPascal(){
+            let n1 = parseInt(document.getElementById('num').value);
+        }
+        function f(n) {
+            if (n <= 1) return 1;
+            else return n * f(n - 1);
+        }
+        function pascal() {
+            n = 5;
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < n - i + 1; j++) {
+                    document.write("&nbsp;");
+                }
+
+                for (j = 0; j < i + 1; j++) {
+                    document.write(Math.floor(f(i) / (f(j) * f(i - j))), " ");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

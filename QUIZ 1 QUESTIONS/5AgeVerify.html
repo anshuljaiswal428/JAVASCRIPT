@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>AGE VALIDATOR</title>
+</head>
+
+<body style="text-align:center;">
+    <h1>AGE VALIDATOR</h1>
+    <form id="frm1">
+        <p>Enter Your FName: <input type="text" id="fname" name="fname" maxlength="20" /></p>
+        <p>Enter Your LName: <input type="text" id="lname" name="lname" maxlength="20" /></p>
+        <p>Enter Your Age: <input type="text" id="age" name="age" maxlength="10" /></p>
+        <button onclick="myFun()">VALIDATE</button>
+        <input type="reset" name="RESET" />
+    </form>
+    <script>
+        function myFun() {
+            let fname = document.getElementById('fname').value;
+            let lname = document.getElementById('lname').value;
+            let age = parseInt(document.getElementById('age').value);
+            if (age > 18 && age < 30) { alert("Fname: "+fname+"\nLName: "+lname+"\nYou are eligible!"); }
+            else { alert("Fname: "+fname+"\nLName: "+lname+"\nYou are not eligible!"); }
+        }
+    </script>
+</body>
+
+</html>

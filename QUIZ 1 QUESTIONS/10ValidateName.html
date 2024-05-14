@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>VALIDATE ALPHABETS</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+
+        button {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VALIDATE ALPHABETS</h1>
+    <form id="frm1">
+        <p>Enter Your Name: <input type="text" id="name" name="name" maxlength="20" /></p>
+        <button class="button" onclick="myValid()">VALIDATE</button>
+        <br><br>
+        <input class="button" type="reset" name="RESET" />
+    </form>
+    <script>
+        function myValid() {
+            let str = document.getElementById('name').value;
+            let x = /^[a-zA-Z]+$/;
+            let res = x.test(str);
+            if(res == true){
+                alert('"'+str+'" only alphabets!');
+            }
+            else{
+                alert('"'+str+'" not only alphabets!');
+            }
+        }
+    </script>
+</body>
+
+</html>

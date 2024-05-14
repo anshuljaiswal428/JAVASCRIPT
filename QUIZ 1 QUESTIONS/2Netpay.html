@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>NETPAY CALCULATOR</title>
+</head>
+<body style="text-align:center;">
+    <h1>NETPAY CALCULATOR</h1>
+    <form id="frm1">
+        <p>Enter Your Name: <input type="text" id="name" name="name" maxlength="20" /></p>
+        <p>Enter Code: <input type="text" id="code" name="code" maxlength="10" /></p>
+        <p>Enter Your Salary: <input type="text" id="sal" name="sal" /></p>
+        <button onclick="myFun()">NETPAY</button>
+        <input type="reset" name="RESET" />
+    </form>
+
+    <script>
+        function myFun() {
+            let name = document.getElementById('name').value;
+            let code = document.getElementById('code').value;
+            let sal = parseInt(document.getElementById('sal').value);
+            let pf = (sal * 12)/100;
+            let it = (sal * 14)/100;
+            let da = (sal * 20)/100;
+            let hra = (sal * 15)/100;
+            let netpay = (sal+da+hra)-(pf+it);
+            alert("NETPAY IS - "+netpay);
+        }
+    </script>
+</body>
+</html>

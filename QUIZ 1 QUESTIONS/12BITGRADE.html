@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>BIRLA INSTITUTE OF TECHNOLOGY</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+
+        button {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="text-align:center;">
+    <h1>BIRLA INSTITUTE OF TECHNOLOGY</h1>
+    <h6>NOIDA CAMPUS</h6>
+    <form id="frm1">
+        <p>Enter Your Name: <input type="text" id="name" name="name" maxlength="20" /></p>
+        <p>Enter Your Roll No.: <input type="text" id="roll" name="roll" maxlength="5" /></p>
+        <p>Enter Your Marks of SUB 1: <input type="text" id="mar1" name="mar1" /></p>
+        <p>Enter Your Marks of SUB 2: <input type="text" id="mar2" name="mar2" /></p>
+        <p>Enter Your Marks of SUB 3: <input type="text" id="mar3" name="mar3" /></p>
+        <input type="submit" onclick="myFun(); event.preventDefault();" name="SUBMIT" />
+    </form>
+    <p id="demo"></p>
+
+    <script>
+        function myFun() {
+            let name = document.getElementById('name').value;
+            let roll = document.getElementById('roll').value;
+            let mar1 = parseInt(document.getElementById('mar1').value);
+            let mar2 = parseInt(document.getElementById('mar2').value);
+            let mar3 = parseInt(document.getElementById('mar3').value);
+            let total = mar1 + mar2 + mar3;
+            let perc = (total / 300) * 100;
+
+            let grade;
+            if (perc >= 90) {
+                grade = 'A';
+            } else if (perc >= 80) {
+                grade = 'B';
+            } else if (perc >= 70) {
+                grade = 'C';
+            } else if (perc >= 60) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+            var resultMessage = "Name: " + name + "<br>" +
+                "Roll Number: " + roll + "<br>" +
+                "Total Marks: " + total + "<br>" +
+                "Percentage " + perc + "<br>" +
+                "Grade: " + grade;
+            document.getElementById('demo').innerHTML = resultMessage;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Hover Effect</title>
+<style>
+    #container {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 300px;
+    }
+</style>
+</head>
+<body align = "center">
+
+<div id="container" onmouseover="myFun()">
+    <img src='BIT.png' style='max-width:100%; max-height:100%;'><br>BIT NOIDA";
+</div>
+
+<script>
+function myFun() {
+    var container = document.getElementById("container");
+    container.innerHTML = "<img src='ANS.png' style='max-width:100%; max-height:100%;'><br>ANSHUL JAISWAL";
+}
+</script>
+
+</body>
+</html>
