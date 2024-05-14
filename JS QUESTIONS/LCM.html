@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>LCM</title>
+
+    <script>
+        function gcd(n2, n1) {
+            while (1) {
+                if (n2 % n1 == 0) {
+                    break;
+                }
+                else {
+                    rem = n2 % n1;
+                    n2 = n1;
+                    n1 = rem;
+                }
+            }
+            return rem;
+        }
+
+        var inputA = prompt("Enter the first number: ");
+        var inputB = prompt("Enter the second number: ");
+        var A = parseInt(inputA);
+        var B = parseInt(inputB);
+        result = gcd(A, B);
+        document.write("The LCM of number is - ",(A*B)/result);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

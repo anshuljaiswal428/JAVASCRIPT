@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Check Palindrome</title>
+    <script>
+        function CheckPalind(str, sz){
+            i=0;
+            j=sz;
+            while(i<sz/2){
+                while(j>=i){
+                    if(str[i] != str[j]){
+                        return false;
+                    }
+                    i+=1;
+                    j-=1;
+                }
+                return true;
+            }
+        }
+        function main(){
+            let res = true;
+            str = prompt("Enter to check palindrome - ");
+            sz = str.length;
+            res = CheckPalind(str, (sz-1));
+            if(res == true){
+                alert(str+" is a palindrome!");
+            }
+            else{
+                alert(str+" is not a palindrome!");
+            }
+        }
+        main();
+    </script>
+</head>
+
+</html>

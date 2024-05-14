@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Fibonacci</title>
+    <script>
+        function fibbo(num) {
+            if (num <= 1)
+                return num;
+            else
+                return fibbo(num - 1) + fibbo(num - 2);
+        }
+
+        inp = prompt("Enter the number to get fibonacci series upto - ");
+
+        num = parseInt(inp);
+
+        document.write("The fibonacci series upto "+num+" is - ");
+
+        for (let i = 0; i < num; i++) {
+            document.write(fibbo(i)+", ");
+        }
+    </script>
+</head>
+
+</html>

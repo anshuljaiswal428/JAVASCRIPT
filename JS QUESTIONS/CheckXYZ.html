@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>COMPARE SUB STRING XYZ</title>
+
+    <script>
+        function checksub(str1) {
+            let sum = 0;
+            for (var i = 0; i < str1.length; i++) {
+                if(str1[i]=='x' || str[i]=='y' || str[i]=='z'){
+                    sum+=1;
+                    if(sum == 3){
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        var str = prompt("Enter string - ");
+        let res = checksub(str);
+        res?alert("Yes, xyz is a substring of above string!"):alert("NO, xyz is not a substring of above string!");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

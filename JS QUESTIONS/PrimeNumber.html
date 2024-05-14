@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Prime Number</title>
+    <script>
+        function prime(n) {
+            for (i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+
+        inp = prompt("Enter the number to check it is prime or not - ");
+
+        num = parseInt(inp);
+
+        res = prime(num);
+
+        document.write(res?alert(num+" is prime number."):alert(num+" is not a prime number."));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

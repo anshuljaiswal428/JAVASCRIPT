@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>SQUARE ROOT</title>
+
+    <script>
+        function sqrt(num){
+            for(let i = 0; i<=num/2; i++){
+                if(i*i == num) return i;
+            }
+            return false;
+        }
+        let num = prompt("Enter the number to find square root - ");
+        res = sqrt(num);
+        res?alert(res+" is square root of "+num+" !"):alert("No square root found!");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
